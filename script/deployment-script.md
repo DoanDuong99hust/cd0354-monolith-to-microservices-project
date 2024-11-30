@@ -26,6 +26,7 @@ kubectl apply -f api-feed-service.yaml
 kubectl apply -f api-user-service.yaml 
 
 kubectl apply -f reverse-proxy-deployment.yaml 
+kubectl apply -f reverse-proxy-service.yaml 
 kubectl apply -f frontend-deployment.yaml 
 
 # expose services to external internet
