@@ -28,6 +28,7 @@ kubectl apply -f api-user-service.yaml
 kubectl apply -f reverse-proxy-deployment.yaml 
 kubectl apply -f reverse-proxy-service.yaml 
 kubectl apply -f frontend-deployment.yaml 
+kubectl apply -f frontend-service.yaml 
 
 # expose services to external internet
 kubectl expose deployment frontend --type=LoadBalancer --name=frontend

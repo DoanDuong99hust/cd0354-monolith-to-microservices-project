@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: feed-api
-        image: 29061999/udagram-api-feed
+        image: 29061999/udagram-api-feed:v1
         ports:
         - containerPort: 8080
         volumeMounts:
