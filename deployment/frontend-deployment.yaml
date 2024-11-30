@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: 29061999/udagram-frontend
+        volumeMounts:
+        - name: frontend-app-config
+          mountPath: /usr/share/nginx/html/assets/app.config.json
+          subPath: udagram-frontend/src/assets/app.config.json
+          readOnly: true
+        ports:
+        - containerPort: 80
+
+      volumes:
+      - name: frontend-app-config
+        configMap:
+          name: frontend-app-config

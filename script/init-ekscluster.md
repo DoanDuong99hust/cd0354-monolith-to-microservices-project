@@ -8,9 +8,9 @@ aws sts get-caller-identity
 eksctl create cluster --name microservice-cluster --region us-east-1 --nodegroup-name microservice-nodegroup --node-type t3.small --nodes 1 --nodes-min 1 --nodes-max 2
 
 # update eks to point to cluster created. It will create a file to save context point to this cluster
-aws eks --region us-east-1 update-kubeconfig --name workspace-cluster
+aws eks --region us-east-1 update-kubeconfig --name microservice-cluster
 
-# verify current context, should show arn:aws:eks:us-west-2:411764878390902:cluster/workspace-cluster
+# verify current context, should show Added new context arn:aws:eks:us-east-1:764672971886:cluster/microservice-cluster
 kubectl config current-context
 
 # view all config of kubectl
