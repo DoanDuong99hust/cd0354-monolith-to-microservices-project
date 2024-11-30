@@ -23,7 +23,7 @@ kubectl config get-contexts
 kubectl config delete-context NAME
 
 # delete eks cluster
-eksctl delete cluster --name workspace-cluster --region us-east-1
+eksctl delete cluster --name microservice-cluster --region us-east-1
 
 # get namespace of cluster
 kubectl get namespace

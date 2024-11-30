@@ -1,6 +1,6 @@
 FROM node:14 AS ionic
 WORKDIR /usr/src/app
-COPY package*.json .
+COPY package*.json ./
 RUN npm install -f
 RUN npm install -g ionic
 COPY . .
