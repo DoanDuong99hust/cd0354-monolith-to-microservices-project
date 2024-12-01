@@ -19,7 +19,7 @@ spec:
         image: 29061999/udagram-frontend:v1
         volumeMounts:
         - name: frontend-app-config
-          mountPath: /usr/share/nginx/html/assets/app.config.json
+          mountPath: /usr/share/nginx/html/assets/
           subPath: app.config.json
           readOnly: true
         ports:
