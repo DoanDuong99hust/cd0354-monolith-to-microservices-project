@@ -6,6 +6,7 @@ data:
   AWS_BUCKET: microservice-eks-bucket
   AWS_REGION: us-east-1
   URL: http://localhost:8080
-  app.config.json: {
-    "backendHost":"http://aaf5197589aa9485ea570946cfaf1481-1902334489.us-east-1.elb.amazonaws.com:8080/api/v0"
-  }
+  app.config.json: |
+    {
+        "backendHost":"http://aaf5197589aa9485ea570946cfaf1481-1902334489.us-east-1.elb.amazonaws.com:8080/api/v0"
+    }
