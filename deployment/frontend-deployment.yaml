@@ -20,7 +20,7 @@ spec:
         volumeMounts:
         - name: frontend-app-config
           mountPath: /usr/share/nginx/html/assets/app.config.json
-          subPath: udagram-frontend/src/assets/app.config.json
+          subPath: app.config.json
           readOnly: true
         ports:
         - containerPort: 80
@@ -28,4 +28,4 @@ spec:
       volumes:
       - name: frontend-app-config
         configMap:
-          name: frontend-app-config
+          name: env-config
