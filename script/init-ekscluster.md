@@ -5,7 +5,7 @@ aws sts get-caller-identity
 # aws configure
 
 # create cluster eks and nodegroup after configure account
-eksctl create cluster --name microservice-cluster --region us-east-1 --nodegroup-name microservice-nodegroup --node-type t3.small --nodes 1 --nodes-min 1 --nodes-max 2
+eksctl create cluster --name microservice-cluster --region us-east-1 --nodegroup-name microservice-nodegroup --node-type t3.medium --nodes 1 --nodes-min 1 --nodes-max 2
 
 # update eks to point to cluster created. It will create a file to save context point to this cluster
 aws eks --region us-east-1 update-kubeconfig --name microservice-cluster

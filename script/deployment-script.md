@@ -38,7 +38,7 @@ kubectl expose deployment reverse-proxy --type=LoadBalancer --name=reverse-proxy
 kubectl create configmap frontend-app-config --from-file=app.config.json
 
 # mount file to secret
-kubectl create secret generic aws-secret --from-file=$HOME/.aws/credentials
+kubectl create secret generic aws-secret --from-file=.aws/credentials
 
 volumes:
     - name: aws-credentials
