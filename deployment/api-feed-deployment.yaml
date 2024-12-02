@@ -17,6 +17,13 @@ spec:
       containers:
       - name: feed-api
         image: 29061999/udagram-api-feed:v1
+        resources:
+          requests:
+            cpu: "500m"    # Request 500 millicores (0.5 vCPU)
+            memory: "256Mi"  # Request 256 MiB memory
+          limits:
+            cpu: "1000m"   # Limit to 1 vCPU
+            memory: "512Mi" # Limit to 512 MiB
         ports:
         - containerPort: 8080
         volumeMounts:
