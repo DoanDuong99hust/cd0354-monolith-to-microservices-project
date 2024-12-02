@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: backend-user
+    name: user-api
   minReplicas: 2         # Minimum number of replicas
   maxReplicas: 3         # Maximum number of replicas
   metrics:
