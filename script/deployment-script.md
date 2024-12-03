@@ -33,7 +33,8 @@ kubectl apply -f frontend-service.yaml
 kubectl expose deployment frontend --type=LoadBalancer --name=frontend
 kubectl expose deployment reverse-proxy --type=LoadBalancer --name=reverse-proxy
 
-## describe hpa
+## apply and describe hpa
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 kubectl autoscale deployment feed-api --cpu-percent=70 --min=3 --max=5
 kubectl describe hpa
 
